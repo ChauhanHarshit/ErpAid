@@ -8,16 +8,17 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { z } from "zod"
 
 import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
-import { Calendar } from "@/components/ui/calendar"
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
-import { Input } from "@/components/ui/input"
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Textarea } from "@/components/ui/textarea"
+import { Button } from "@/app/[locale]/components/ui/button"
+import { Calendar } from "@/app/[locale]/components/ui/calendar"
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/app/[locale]/components/ui/form"
+import { Input } from "@/app/[locale]/components/ui/input"
+import { Popover, PopoverContent, PopoverTrigger } from "@/app/[locale]/components/ui/popover"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/app/[locale]/components/ui/select"
+import { Textarea } from "@/app/[locale]/components/ui/textarea"
 import { useToast } from "@/hooks/use-toast"
 
-import { submitContactForm } from "../../actions/contact"
+import { submitContactForm } from "../../../actions/contact"
+// import { useTranslation } from "react-i18next"
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -46,6 +47,8 @@ const timezones = [
 ]
 
 export default function ContactPage() {
+  // const t = useTranslation("HomePage");
+
   const { toast } = useToast()
   const [isSubmitting, setIsSubmitting] = useState(false)
   const form = useForm<z.infer<typeof formSchema>>({

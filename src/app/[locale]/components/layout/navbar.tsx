@@ -2,23 +2,26 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
+import { Button } from "@/app/[locale]/components/ui/button"
 import { Menu, X } from "lucide-react"
 import { motion } from "framer-motion"
 import Image from "next/image"
-// import { useRouter } from "next/navigation"
+import { useRouter, usePathname } from "next/navigation" // Add usePathname
 import { useTranslation } from "next-i18next"
-import { useRouter } from "next/router"
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
+import { Popover, PopoverContent, PopoverTrigger } from "@/app/[locale]/components/ui/popover"
+import {useTranslations} from 'next-intl';
 
 export default function Navbar() {
+  const t = useTranslations('HomePage');
+
   const router = useRouter();
-  const [isOpen, setIsOpen] = useState(false)
-  const { t } = useTranslation()
+  const pathname = usePathname(); // Get the current path
+  const [isOpen, setIsOpen] = useState(false);
 
   const changeLanguage = (lng: string) => {
-    router.push(router.pathname, router.asPath, { locale: lng })
-  }
+    // i18n.changeLanguage(lng); // Change language using i18n
+    // router.push(`/${lng}${pathname}`); // Navigate to the same path with the new language prefix
+  };
 
   return (
     <motion.header
@@ -33,7 +36,6 @@ export default function Navbar() {
             ERPAid
           </Link>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             <Link href="/services" className="text-gray-600 hover:text-[#4169E1] transition-colors">
               {t("services")}
@@ -44,7 +46,7 @@ export default function Navbar() {
             <Link href="/blog" className="text-gray-600 hover:text-[#4169E1] transition-colors">
               {t("blog")}
             </Link>
-            <Button className="bg-[#4169E1] hover:bg-[#4169E1]/90" onClick={() => router.push("/contact")}>
+            <Button className="bg-[#4169E1] hover:bg-[#4169E1]/90">
               {t("requestDemo")}
             </Button>
             <Popover>
@@ -62,13 +64,11 @@ export default function Navbar() {
             </Popover>
           </div>
 
-          {/* Mobile Menu Button */}
           <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <X /> : <Menu />}
           </button>
         </div>
 
-        {/* Mobile Navigation */}
         {isOpen && (
           <motion.div
             className="md:hidden pt-4"
@@ -86,7 +86,7 @@ export default function Navbar() {
               <Link href="/blog" className="text-gray-600 hover:text-[#4169E1] transition-colors">
                 {t("blog")}
               </Link>
-              <Button className="bg-[#4169E1] hover:bg-[#4169E1]/90 w-full" onClick={() => router.push("/contact")}>
+              <Button className="bg-[#4169E1] hover:bg-[#4169E1]/90 w-full">
                 {t("requestDemo")}
               </Button>
               <Popover>
@@ -107,5 +107,5 @@ export default function Navbar() {
         )}
       </nav>
     </motion.header>
-  )
+  );
 }
