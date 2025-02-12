@@ -1,0 +1,188 @@
+{
+    "HomePage": {
+      "services": "Dienstleistungen",
+      "about": "Über uns",
+      "blog": "Blog",
+      "requestDemo": "Demo anfordern",
+      "unlockingBusinessGrowth": "Freisetzung des Geschäftswachstums",
+      "withIntelligentERP": "mit intelligentem ERP",
+      "streamlineOperations": "Optimieren Sie Abläufe, steigern Sie die Effizienz und verschaffen Sie sich einen Wettbewerbsvorteil mit unseren fortschrittlichen ERP-Lösungen.",
+      "trustedByBusinesses": "Vertrauenswürdig für führende Unternehmen weltweit",
+      "requestADemo": "Demo anfordern",
+      "viewServices": "Dienstleistungen anzeigen"
+    },
+    "Hero": {
+      "unlockingBusinessGrowth": "Freisetzung des Geschäftswachstums",
+      "withIntelligentERP": "mit intelligentem ERP",
+      "streamlineOperations": "Optimieren Sie Abläufe, steigern Sie die Effizienz und verschaffen Sie sich einen Wettbewerbsvorteil mit unseren fortschrittlichen ERP-Lösungen.",
+      "requestADemo": "Demo anfordern",
+      "viewServices": "Dienstleistungen anzeigen",
+      "trustedByBusinesses": "Vertrauenswürdig für führende Unternehmen weltweit"
+    },
+    "Features": {
+      "sectionTitle": "Umfassende ERP-Lösungen",
+      "sectionDescription": "Entdecken Sie, wie unsere Lösungen Ihre Geschäftsprozesse transformieren und Wachstum fördern können.",
+      "learnMore": "Mehr erfahren",
+      "financialManagement": {
+        "title": "Finanzmanagement",
+        "description": "Effiziente Verwaltung und Optimierung von Arbeitskräften.",
+        "benefits": [
+          "Mitarbeiterplanung",
+          "Leistungsverfolgung",
+          "Ressourcenzuweisung"
+        ]
+      },
+      "digitalTransformation": {
+        "title": "Digitale Transformation",
+        "description": "Transformieren Sie Ihr Unternehmen mit modernen digitalen Lösungen.",
+        "benefits": [
+          "Automatisierte Workflows",
+          "Optimierung digitaler Prozesse",
+          "Gesteigerte Produktivität"
+        ]
+      },
+      "erpSolutions": {
+        "title": "ERP-Lösungen",
+        "description": "Umfassende ERP-Lösungen, die auf Ihre Bedürfnisse zugeschnitten sind.",
+        "benefits": [
+          "Optimierte Abläufe",
+          "Echtzeitanalysen",
+          "Integrierte Systeme"
+        ]
+      },
+      "crmSoftware": {
+        "title": "CRM-Software",
+        "description": "Effektives Management von Kundenbeziehungen.",
+        "benefits": [
+          "Lead-Management",
+          "Vertriebsautomatisierung",
+          "Kundenanalyse"
+        ]
+      },
+      "supplyChain": {
+        "title": "Lieferkette",
+        "description": "Optimieren Sie Ihre Lieferkettenprozesse nahtlos.",
+        "benefits": [
+          "Bestandskontrolle",
+          "Logistikverfolgung",
+          "Lieferantenmanagement"
+        ]
+      },
+      "workforceManagement": {
+        "title": "Personalmanagement",
+        "description": "Effiziente Verwaltung und Optimierung von Arbeitskräften.",
+        "benefits": [
+          "Mitarbeiterplanung",
+          "Leistungsverfolgung",
+          "Ressourcenzuweisung"
+        ]
+      }
+    },
+    "Stats": {
+      "sectionTitle": "Messbare Ergebnisse liefern",
+      "sectionDescription": "Erfahren Sie, wie unsere ERP-Lösungen Unternehmen wie Ihrem geholfen haben.",
+      "stat1": {
+        "value": "95+",
+        "label": "Kundenzufriedenheit",
+        "description": "Unsere Kunden bewerten ihre Erfahrungen mit unseren ERP-Lösungen stets positiv."
+      },
+      "stat2": {
+        "value": "30%",
+        "label": "Effizienzsteigerung",
+        "description": "Im Durchschnitt erleben unsere Kunden eine deutliche Steigerung der betrieblichen Effizienz nach der Implementierung unserer ERP-Lösungen."
+      },
+      "stat3": {
+        "value": "15%",
+        "label": "Kostensenkung",
+        "description": "Unsere Lösungen helfen Unternehmen, Prozesse zu optimieren und Kosten zu senken."
+      }
+    },
+    "Testimonials": {
+      "title": "Was unsere Kunden sagen",
+      "description": "Hören Sie von einigen unserer zufriedenen Kunden.",
+      "testimonial1": {
+        "quote": "ERPAid hat unsere Betriebsabläufe revolutioniert. Die Effizienzgewinne sind bemerkenswert.",
+        "author": "Sarah Johnson",
+        "role": "Betriebsleiterin",
+        "company": "Tech Solutions Inc."
+      },
+      "testimonial2": {
+        "quote": "Die Implementierung verlief reibungslos und die Ergebnisse waren sofort sichtbar.",
+        "author": "Michael Chen",
+        "role": "CEO",
+        "company": "Global Logistics"
+      },
+      "testimonial3": {
+        "quote": "Der Support und die Expertise des ERPAid-Teams sind außergewöhnlich.",
+        "author": "Emma Williams",
+        "role": "IT-Managerin",
+        "company": "Manufacturing Pro"
+      },
+      "testimonial4": {
+        "quote": "Die Flexibilität von ERPAid ermöglichte es uns, uns schnell an neue Geschäftsprozesse anzupassen.",
+        "author": "David Lee",
+        "role": "CTO",
+        "company": "Innovatech Corp."
+      },
+      "testimonial5": {
+        "quote": "Seit der Einführung von ERPAid ist unsere Produktivität um 30 % gestiegen.",
+        "author": "Sophia Brown",
+        "role": "Projektmanagerin",
+        "company": "Enterprise Dynamics"
+      },
+      "testimonial6": {
+        "quote": "ERPAid ist ein echter Game-Changer für unser Unternehmen.",
+        "author": "James Wilson",
+        "role": "Finanzvorstand",
+        "company": "Global Ventures"
+      }
+    },
+    "CTA": {
+      "title": "Bereit, Ihr Unternehmen zu transformieren?",
+      "description": "Kontaktieren Sie uns, um zu erfahren, wie unsere ERP-Lösungen Ihre Abläufe optimieren können.",
+      "scheduleDemo": "Demo vereinbaren",
+      "contactSales": "Vertrieb kontaktieren"
+    },
+    "Footer": {
+      "companyName": "ERPAid",
+      "description": "Unsere Lösungen helfen Unternehmen, Prozesse zu optimieren und Kosten zu senken.",
+      "services": "Dienstleistungen",
+      "digitalTransformation": "Digitale Transformation",
+      "personalizedERP": "Personalisierte ERP-Lösungen",
+      "erpSoftware": "ERP-Softwarelösungen",
+      "workforceMgmt": "Personalmanagement-Lösungen",
+      "integrations": "Integrationen",
+      "connect": "Kontakt",
+      "blog": "Blog",
+      "allRightsReserved": "Alle Rechte vorbehalten."
+    },
+
+        "ContactPage": {
+          "title": "Bereit für Innovation? Lassen Sie uns über Zusammenarbeit sprechen",
+          "description": "Vereinbaren Sie ein Treffen mit unserem Team, um Ihr Projekt zu besprechen",
+          "form": {
+            "name": "Name",
+            "email": "E-Mail",
+            "phone": "Telefon",
+            "timezone": "Zeitzone",
+            "date": "Datum",
+            "preferredTime": "Bevorzugte Zeit",
+            "agenda": "Agenda",
+            "attachFiles": "Dateien anhängen",
+            "submit": "Absenden",
+            "submitting": "Wird gesendet...",
+            "selectTimezone": "Wählen Sie Ihre Zeitzone",
+            "selectTimeSlot": "Wählen Sie einen Zeitraum",
+            "pickDate": "Datum auswählen",
+            "agendaPlaceholder": "Erzählen Sie uns von Ihrem Projekt und worüber Sie sprechen möchten..."
+          },
+          "toast": {
+            "success": "Erfolg!",
+            "error": "Fehler",
+            "successMessage": "Ihre Nachricht wurde erfolgreich gesendet!",
+            "errorMessage": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut."
+          }
+        }
+      
+  }
+  

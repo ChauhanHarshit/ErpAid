@@ -1,11 +1,13 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useRef } from "react"
 import { CalendarIcon, Loader2, PaperclipIcon } from "lucide-react"
 import { format } from "date-fns"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { z } from "zod"
+import { useTranslations } from "next-intl"
+import emailjs from "@emailjs/browser"
 
 import { cn } from "@/lib/utils"
 import { Button } from "@/app/[locale]/components/ui/button"
@@ -17,13 +19,10 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Textarea } from "@/app/[locale]/components/ui/textarea"
 import { useToast } from "@/hooks/use-toast"
 
-import { submitContactForm } from "../../../actions/contact"
-// import { useTranslation } from "react-i18next"
-
 const formSchema = z.object({
-  name: z.string().min(2, "Name must be at least 2 characters"),
-  email: z.string().email("Invalid email address"),
-  phone: z.string().min(10, "Phone number must be at least 10 digits"),
+  name: z.string().min(2),
+  email: z.string().email(),
+  phone: z.string().min(10),
   timezone: z.string(),
   date: z.date(),
   timeSlot: z.string(),
@@ -47,11 +46,12 @@ const timezones = [
 ]
 
 export default function ContactPage() {
-  // const t = useTranslation("HomePage");
-
   const { toast } = useToast()
+  const t = useTranslations("ContactPage")
+  const form = useRef<HTMLFormElement | null>(null)
+
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const form = useForm<z.infer<typeof formSchema>>({
+  const formMethods = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
@@ -64,35 +64,36 @@ export default function ContactPage() {
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true)
-    const formData = new FormData()
-    Object.entries(values).forEach(([key, value]) => {
-      if (key === "date") {
-        formData.append(key, format(value, "yyyy-MM-dd"))
-      } else {
-        formData.append(key, value as string)
-      }
-    })
+    const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+    const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
     try {
-      const result = await submitContactForm(formData)
-      if (result.success) {
-        toast({
-          title: "Success!",
-          description: result.message,
-        })
-        form.reset()
+      if (form.current) {
+        const result = await emailjs.sendForm(
+          process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        form.current,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+        )
+
+        if (result.text === "OK") {
+          toast({
+            title: t("toast.success"),
+            description: t("toast.successMessage"),
+          })
+          formMethods.reset()
+        } else {
+          throw new Error("Failed to send email")
+        }
       } else {
-        toast({
-          variant: "destructive",
-          title: "Error",
-          description: result.message,
-        })
+        throw new Error("Form reference is null")
       }
     } catch (error) {
       toast({
         variant: "destructive",
-        title: "Error",
-        description: "Something went wrong. Please try again.",
+        title: t("toast.error"),
+        description: t("toast.errorMessage"),
       })
     } finally {
       setIsSubmitting(false)
@@ -103,20 +104,20 @@ export default function ContactPage() {
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-2xl mx-auto">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Driven to Innovate? Let’s Discuss How We Can Collaborate</h1>
-          <p className="text-gray-600">Schedule a meeting with our team to discuss your project</p>
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">{t("title")}</h1>
+          <p className="text-gray-600">{t("description")}</p>
         </div>
 
         <div className="bg-white shadow-xl rounded-2xl p-8">
-          <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+          <Form {...formMethods}>
+            <form ref={form} onSubmit={formMethods.handleSubmit(onSubmit)} className="space-y-6">
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                 <FormField
-                  control={form.control}
+                  control={formMethods.control}
                   name="name"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Name</FormLabel>
+                      <FormLabel>{t("form.name")}</FormLabel>
                       <FormControl>
                         <Input placeholder="John Doe" {...field} />
                       </FormControl>
@@ -126,11 +127,11 @@ export default function ContactPage() {
                 />
 
                 <FormField
-                  control={form.control}
+                  control={formMethods.control}
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Email</FormLabel>
+                      <FormLabel>{t("form.email")}</FormLabel>
                       <FormControl>
                         <Input placeholder="john@example.com" {...field} />
                       </FormControl>
@@ -142,11 +143,11 @@ export default function ContactPage() {
 
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                 <FormField
-                  control={form.control}
+                  control={formMethods.control}
                   name="phone"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Phone</FormLabel>
+                      <FormLabel>{t("form.phone")}</FormLabel>
                       <FormControl>
                         <Input placeholder="+1 (555) 000-0000" {...field} />
                       </FormControl>
@@ -156,15 +157,15 @@ export default function ContactPage() {
                 />
 
                 <FormField
-                  control={form.control}
+                  control={formMethods.control}
                   name="timezone"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Timezone</FormLabel>
+                      <FormLabel>{t("form.timezone")}</FormLabel>
                       <Select onValueChange={field.onChange} defaultValue={field.value}>
                         <FormControl>
                           <SelectTrigger>
-                            <SelectValue placeholder="Select your timezone" />
+                            <SelectValue placeholder={t("form.selectTimezone")} />
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
@@ -183,11 +184,11 @@ export default function ContactPage() {
 
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                 <FormField
-                  control={form.control}
+                  control={formMethods.control}
                   name="date"
                   render={({ field }) => (
                     <FormItem className="flex flex-col">
-                      <FormLabel>Date</FormLabel>
+                      <FormLabel>{t("form.date")}</FormLabel>
                       <Popover>
                         <PopoverTrigger asChild>
                           <FormControl>
@@ -198,7 +199,7 @@ export default function ContactPage() {
                                 !field.value && "text-muted-foreground",
                               )}
                             >
-                              {field.value ? format(field.value, "PPP") : <span>Pick a date</span>}
+                              {field.value ? format(field.value, "PPP") : <span>{t("form.pickDate")}</span>}
                               <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
                             </Button>
                           </FormControl>
@@ -219,15 +220,15 @@ export default function ContactPage() {
                 />
 
                 <FormField
-                  control={form.control}
+                  control={formMethods.control}
                   name="timeSlot"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Preferred Time</FormLabel>
+                      <FormLabel>{t("form.preferredTime")}</FormLabel>
                       <Select onValueChange={field.onChange} defaultValue={field.value}>
                         <FormControl>
                           <SelectTrigger>
-                            <SelectValue placeholder="Select a time slot" />
+                            <SelectValue placeholder={t("form.selectTimeSlot")} />
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
@@ -245,17 +246,13 @@ export default function ContactPage() {
               </div>
 
               <FormField
-                control={form.control}
+                control={formMethods.control}
                 name="agenda"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Agenda</FormLabel>
+                    <FormLabel>{t("form.agenda")}</FormLabel>
                     <FormControl>
-                      <Textarea
-                        placeholder="Tell us about your project and what you'd like to discuss..."
-                        className="resize-none"
-                        {...field}
-                      />
+                      <Textarea placeholder={t("form.agendaPlaceholder")} className="resize-none" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -265,11 +262,11 @@ export default function ContactPage() {
               <div className="flex items-center gap-4">
                 <Button type="button" variant="outline" className="gap-2">
                   <PaperclipIcon className="h-4 w-4" />
-                  Attach Files
+                  {t("form.attachFiles")}
                 </Button>
                 <Button type="submit" disabled={isSubmitting} className="ml-auto bg-[#4169E1]">
                   {isSubmitting && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-                  {isSubmitting ? "Submitting..." : "Submit"}
+                  {isSubmitting ? t("form.submitting") : t("form.submit")}
                 </Button>
               </div>
             </form>
@@ -279,4 +276,3 @@ export default function ContactPage() {
     </div>
   )
 }
-

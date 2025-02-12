@@ -1,43 +1,70 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Check } from "lucide-react"
-import { Button } from "@/app/[locale]/components/ui/button"
-
-const features = [
-  {
-    title: "Financial Management",
-    description: "Efficient workforce management and optimization.",
-    benefits: ["Employee scheduling", "Performance tracking", "Resource allocation"],
-  },
-  {
-    title: "Digital Transformation",
-    description: "Transform your business with cutting-edge digital solutions.",
-    benefits: ["Automated workflows", "Digital process optimization", "Enhanced productivity"],
-  },
-  {
-    title: "ERP Solutions",
-    description: "Comprehensive ERP solutions tailored to your needs.",
-    benefits: ["Streamlined operations", "Real-time analytics", "Integrated systems"],
-  },
-  {
-    title: "CRM Software",
-    description: "Efficient workforce management and optimization.",
-    benefits: ["Employee scheduling", "Performance tracking", "Resource allocation"],
-  },
-  {
-    title: "Supply Chain",
-    description: "Efficient workforce management and optimization.",
-    benefits: ["Employee scheduling", "Performance tracking", "Resource allocation"],
-  },
-  {
-    title: "Workforce Management",
-    description: "Efficient workforce management and optimization.",
-    benefits: ["Employee scheduling", "Performance tracking", "Resource allocation"],
-  },
-]
+import { motion } from "framer-motion";
+import { Check } from "lucide-react";
+import { Button } from "@/app/[locale]/components/ui/button";
+import { useTranslations } from "next-intl";
 
 export default function Features() {
+  const t = useTranslations("Features");
+
+  const features = [
+    {
+      title: t("financialManagement.title"),
+      description: t("financialManagement.description"),
+      benefits: [
+        t("financialManagement.benefits.0"),
+        t("financialManagement.benefits.1"),
+        t("financialManagement.benefits.2")
+      ],
+    },
+    {
+      title: t("digitalTransformation.title"),
+      description: t("digitalTransformation.description"),
+      benefits: [
+        t("digitalTransformation.benefits.0"),
+        t("digitalTransformation.benefits.1"),
+        t("digitalTransformation.benefits.2")
+      ],
+    },
+    {
+      title: t("erpSolutions.title"),
+      description: t("erpSolutions.description"),
+      benefits: [
+        t("erpSolutions.benefits.0"),
+        t("erpSolutions.benefits.1"),
+        t("erpSolutions.benefits.2")
+      ],
+    },
+    {
+      title: t("crmSoftware.title"),
+      description: t("crmSoftware.description"),
+      benefits: [
+        t("crmSoftware.benefits.0"),
+        t("crmSoftware.benefits.1"),
+        t("crmSoftware.benefits.2")
+      ],
+    },
+    {
+      title: t("supplyChain.title"),
+      description: t("supplyChain.description"),
+      benefits: [
+        t("supplyChain.benefits.0"),
+        t("supplyChain.benefits.1"),
+        t("supplyChain.benefits.2")
+      ],
+    },
+    {
+      title: t("workforceManagement.title"),
+      description: t("workforceManagement.description"),
+      benefits: [
+        t("workforceManagement.benefits.0"),
+        t("workforceManagement.benefits.1"),
+        t("workforceManagement.benefits.2")
+      ],
+    },
+  ];
+
   return (
     <section className="py-24">
       <div className="container mx-auto px-4">
@@ -48,10 +75,8 @@ export default function Features() {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl font-bold mb-4">Comprehensive ERP Solutions</h2>
-          <p className="text-gray-600">
-            Discover how our solutions can transform your business operations and drive growth.
-          </p>
+          <h2 className="text-3xl font-bold mb-4">{t("sectionTitle")}</h2>
+          <p className="text-gray-600">{t("sectionDescription")}</p>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8">
@@ -78,11 +103,11 @@ export default function Features() {
             </motion.div>
           ))}
         </div>
+
         <div className="flex justify-center mt-10">
-          <Button className="bg-[#4169E1] hover:bg-[#4169E1]/90">Learn More</Button>
+          <Button className="bg-[#4169E1] hover:bg-[#4169E1]/90">{t("learnMore")}</Button>
         </div>
       </div>
     </section>
-  )
+  );
 }
-

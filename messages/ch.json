@@ -1,0 +1,185 @@
+{
+    "HomePage": {
+        "services": "服务",
+        "about": "关于我们",
+        "blog": "博客",
+        "requestDemo": "申请演示",
+        "unlockingBusinessGrowth": "释放业务增长潜力",
+        "withIntelligentERP": "借助智能ERP",
+        "streamlineOperations": "优化运营，提高效率，利用我们先进的ERP解决方案获得竞争优势。",
+        "trustedByBusinesses": "全球领先企业的信赖之选",
+        "requestADemo": "申请演示",
+        "viewServices": "查看服务"
+    },
+    "Hero": {
+        "unlockingBusinessGrowth": "释放业务增长潜力",
+        "withIntelligentERP": "借助智能ERP",
+        "streamlineOperations": "优化运营，提高效率，利用我们先进的ERP解决方案获得竞争优势。",
+        "requestADemo": "申请演示",
+        "viewServices": "查看服务",
+        "trustedByBusinesses": "全球领先企业的信赖之选"
+    },
+    "Features": {
+        "sectionTitle": "全面的ERP解决方案",
+        "sectionDescription": "了解我们的解决方案如何转变您的业务流程并推动增长。",
+        "learnMore": "了解更多",
+        "financialManagement": {
+            "title": "财务管理",
+            "description": "高效的员工管理和优化。",
+            "benefits": [
+                "员工排班",
+                "绩效跟踪",
+                "资源分配"
+            ]
+        },
+        "digitalTransformation": {
+            "title": "数字化转型",
+            "description": "借助前沿数字解决方案推动您的业务转型。",
+            "benefits": [
+                "自动化工作流程",
+                "数字流程优化",
+                "提高生产力"
+            ]
+        },
+        "erpSolutions": {
+            "title": "ERP解决方案",
+            "description": "量身定制的全面ERP解决方案。",
+            "benefits": [
+                "简化运营",
+                "实时分析",
+                "系统集成"
+            ]
+        },
+        "crmSoftware": {
+            "title": "CRM软件",
+            "description": "有效管理客户关系。",
+            "benefits": [
+                "潜在客户管理",
+                "销售自动化",
+                "客户洞察"
+            ]
+        },
+        "supplyChain": {
+            "title": "供应链管理",
+            "description": "无缝优化供应链运营。",
+            "benefits": [
+                "库存控制",
+                "物流跟踪",
+                "供应商管理"
+            ]
+        },
+        "workforceManagement": {
+            "title": "劳动力管理",
+            "description": "高效的员工管理和优化。",
+            "benefits": [
+                "员工排班",
+                "绩效跟踪",
+                "资源分配"
+            ]
+        }
+    },
+    "Stats": {
+        "sectionTitle": "实现可衡量的成果",
+        "sectionDescription": "了解我们的ERP解决方案如何帮助像您这样的企业。",
+        "stat1": {
+            "value": "95+",
+            "label": "客户满意度",
+            "description": "我们的客户始终对我们的ERP解决方案给予高度评价。"
+        },
+        "stat2": {
+            "value": "30%",
+            "label": "效率提升",
+            "description": "实施我们的ERP解决方案后，客户的运营效率显著提高。"
+        },
+        "stat3": {
+            "value": "15%",
+            "label": "成本降低",
+            "description": "我们的解决方案帮助企业优化运营流程，降低手工操作带来的成本。"
+        }
+    },
+    "Testimonials": {
+        "title": "客户评价",
+        "description": "聆听部分满意客户的心声。",
+        "testimonial1": {
+            "quote": "ERPAid彻底改变了我们的运营管理方式，效率提升非常显著。",
+            "author": "Sarah Johnson",
+            "role": "运营总监",
+            "company": "Tech Solutions Inc."
+        },
+        "testimonial2": {
+            "quote": "实施过程顺利，效果立竿见影，强烈推荐！",
+            "author": "Michael Chen",
+            "role": "首席执行官",
+            "company": "Global Logistics"
+        },
+        "testimonial3": {
+            "quote": "ERPAid团队的支持和专业水平非常出色。",
+            "author": "Emma Williams",
+            "role": "IT经理",
+            "company": "Manufacturing Pro"
+        },
+        "testimonial4": {
+            "quote": "ERPAid的灵活功能帮助我们轻松适应新的业务流程。",
+            "author": "David Lee",
+            "role": "技术总监",
+            "company": "Innovatech Corp."
+        },
+        "testimonial5": {
+            "quote": "自从实施ERPAid后，我们的生产力提高了30%。",
+            "author": "Sophia Brown",
+            "role": "项目经理",
+            "company": "Enterprise Dynamics"
+        },
+        "testimonial6": {
+            "quote": "ERPAid彻底改变了我们的组织，是我们的业务增长引擎。",
+            "author": "James Wilson",
+            "role": "首席财务官",
+            "company": "Global Ventures"
+        }
+    },
+    "CTA": {
+        "title": "准备好改变您的业务了吗？",
+        "description": "联系我们的团队，了解我们的ERP解决方案如何帮助您优化运营，提高效率。",
+        "scheduleDemo": "安排演示",
+        "contactSales": "联系销售"
+    },
+    "Footer": {
+        "companyName": "ERPAid",
+        "description": "我们的解决方案帮助企业优化运营流程，降低成本。",
+        "services": "服务",
+        "digitalTransformation": "数字化转型",
+        "personalizedERP": "个性化ERP解决方案",
+        "erpSoftware": "ERP软件解决方案",
+        "workforceMgmt": "劳动力管理解决方案",
+        "integrations": "集成",
+        "connect": "联系我们",
+        "blog": "博客",
+        "allRightsReserved": "版权所有。"
+    },
+    "ContactPage": {
+        "title": "渴望创新？让我们讨论如何合作",
+        "description": "与我们的团队预约会议，讨论您的项目",
+        "form": {
+            "name": "姓名",
+            "email": "电子邮件",
+            "phone": "电话",
+            "timezone": "时区",
+            "date": "日期",
+            "preferredTime": "首选时间",
+            "agenda": "议程",
+            "attachFiles": "附加文件",
+            "submit": "提交",
+            "submitting": "提交中...",
+            "selectTimezone": "选择您的时区",
+            "selectTimeSlot": "选择一个时间段",
+            "pickDate": "选择日期",
+            "agendaPlaceholder": "告诉我们您的项目以及您想讨论的内容..."
+        },
+        "toast": {
+            "success": "成功！",
+            "error": "错误",
+            "successMessage": "您的消息已成功发送！",
+            "errorMessage": "出现问题。请再试一次。"
+        }
+    }
+}

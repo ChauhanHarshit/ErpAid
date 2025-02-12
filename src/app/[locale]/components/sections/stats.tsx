@@ -1,8 +1,29 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 export default function Stats() {
+  const t = useTranslations("Stats");
+
+  const stats = [
+    {
+      stat: t("stat1.value"),
+      label: t("stat1.label"),
+      description: t("stat1.description"),
+    },
+    {
+      stat: t("stat2.value"),
+      label: t("stat2.label"),
+      description: t("stat2.description"),
+    },
+    {
+      stat: t("stat3.value"),
+      label: t("stat3.label"),
+      description: t("stat3.description"),
+    },
+  ];
+
   return (
     <section className="py-24 relative overflow-hidden">
       <motion.div
@@ -24,30 +45,12 @@ export default function Stats() {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl font-bold mb-4">Delivering Measurable Results</h2>
-          <p className="text-gray-600">See how our ERP solutions have helped businesses like yours.</p>
+          <h2 className="text-3xl font-bold mb-4">{t("sectionTitle")}</h2>
+          <p className="text-gray-600">{t("sectionDescription")}</p>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          {[
-            {
-              stat: "95+",
-              label: "Customer Satisfaction",
-              description: "Our clients consistently rate their experience with our ERP solutions highly.",
-            },
-            {
-              stat: "30%",
-              label: "Increase in Efficiency",
-              description:
-                "On average, our clients experience a significant boost in operational efficiency after implementing our ERP solutions.",
-            },
-            {
-              stat: "15%",
-              label: "Reduction in Costs",
-              description:
-                "Our solutions help businesses streamline operations and reduce costs associated with manual processes.",
-            },
-          ].map((item, index) => (
+          {stats.map((item, index) => (
             <motion.div
               key={index}
               className="bg-white rounded-xl shadow-lg p-8"
@@ -65,6 +68,5 @@ export default function Stats() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-

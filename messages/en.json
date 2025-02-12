@@ -1,14 +1,191 @@
 {
-    "HomePage": {
-        "services": "Services",
-        "about": "About",
-        "blog": "Blog",
-        "requestDemo": "Request a Demo",
-        "unlockingBusinessGrowth": "Unlocking Business Growth",
-        "withIntelligentERP": "with Intelligent ERP",
-        "streamlineOperations": "Streamline operations, boost efficiency, and gain a competitive edge with our cutting-edge ERP solutions.",
-        "trustedByBusinesses": "Trusted by Leading Businesses Worldwide",
-        "requestADemo": "Request a Demo",
-        "viewServices": "View Services"
+  "HomePage": {
+    "services": "Services",
+    "about": "About",
+    "blog": "Blog",
+    "requestDemo": "Request a Demo",
+    "unlockingBusinessGrowth": "Unlocking Business Growth",
+    "withIntelligentERP": "with Intelligent ERP",
+    "streamlineOperations": "Streamline operations, boost efficiency, and gain a competitive edge with our cutting-edge ERP solutions.",
+    "trustedByBusinesses": "Trusted by Leading Businesses Worldwide",
+    "requestADemo": "Request a Demo",
+    "viewServices": "View Services"
+  },
+  "Hero": {
+    "unlockingBusinessGrowth": "Unlocking Business Growth",
+    "withIntelligentERP": "with Intelligent ERP",
+    "streamlineOperations": "Streamline operations, boost efficiency, and gain a competitive edge with our cutting-edge ERP solutions.",
+    "requestADemo": "Request a Demo",
+    "viewServices": "View Services",
+    "trustedByBusinesses": "Trusted by Leading Businesses Worldwide"
+  },
+  "Features": {
+    "sectionTitle": "Comprehensive ERP Solutions",
+    "sectionDescription": "Discover how our solutions can transform your business operations and drive growth.",
+    "learnMore": "Learn More",
+    "financialManagement": {
+      "title": "Financial Management",
+      "description": "Efficient workforce management and optimization.",
+      "benefits": [
+        "Employee scheduling",
+        "Performance tracking",
+        "Resource allocation"
+      ]
+    },
+    "digitalTransformation": {
+      "title": "Digital Transformation",
+      "description": "Transform your business with cutting-edge digital solutions.",
+      "benefits": [
+        "Automated workflows",
+        "Digital process optimization",
+        "Enhanced productivity"
+      ]
+    },
+    "erpSolutions": {
+      "title": "ERP Solutions",
+      "description": "Comprehensive ERP solutions tailored to your needs.",
+      "benefits": [
+        "Streamlined operations",
+        "Real-time analytics",
+        "Integrated systems"
+      ]
+    },
+    "crmSoftware": {
+      "title": "CRM Software",
+      "description": "Manage customer relationships effectively.",
+      "benefits": [
+        "Lead management",
+        "Sales automation",
+        "Customer insights"
+      ]
+    },
+    "supplyChain": {
+      "title": "Supply Chain",
+      "description": "Optimize supply chain operations seamlessly.",
+      "benefits": [
+        "Inventory control",
+        "Logistics tracking",
+        "Supplier management"
+      ]
+    },
+    "workforceManagement": {
+      "title": "Workforce Management",
+      "description": "Efficient workforce management and optimization.",
+      "benefits": [
+        "Employee scheduling",
+        "Performance tracking",
+        "Resource allocation"
+      ]
     }
-  }
+  },
+    "Stats": {
+      "sectionTitle": "Delivering Measurable Results",
+      "sectionDescription": "See how our ERP solutions have helped businesses like yours.",
+      
+      "stat1": {
+        "value": "95+",
+        "label": "Customer Satisfaction",
+        "description": "Our clients consistently rate their experience with our ERP solutions highly."
+      },
+      "stat2": {
+        "value": "30%",
+        "label": "Increase in Efficiency",
+        "description": "On average, our clients experience a significant boost in operational efficiency after implementing our ERP solutions."
+      },
+      "stat3": {
+        "value": "15%",
+        "label": "Reduction in Costs",
+        "description": "Our solutions help businesses streamline operations and reduce costs associated with manual processes."
+      }
+    },
+  
+  "Testimonials": {
+    "sectionTitle": "What Our Clients Say",
+    "sectionDescription": "Don't just take our word for it - hear from some of our satisfied clients",
+    "testimonial1": {
+      "quote": "ERPAid has transformed how we manage our operations. The efficiency gains have been remarkable.",
+      "author": "Sarah Johnson",
+      "role": "Operations Director",
+      "company": "Tech Solutions Inc."
+    },
+    "testimonial2": {
+      "quote": "Implementation was smooth and the results were immediate. Highly recommend their services.",
+      "author": "Michael Chen",
+      "role": "CEO",
+      "company": "Global Logistics"
+    },
+    "testimonial3": {
+      "quote": "The level of support and expertise from the ERPAid team has been exceptional.",
+      "author": "Emma Williams",
+      "role": "IT Manager",
+      "company": "Manufacturing Pro"
+    },
+    "testimonial4": {
+      "quote": "ERPAid's flexible features made it easy for us to adapt to new business processes.",
+      "author": "David Lee",
+      "role": "CTO",
+      "company": "Innovatech Corp."
+    },
+    "testimonial5": {
+      "quote": "We've seen a 30% increase in productivity since implementing ERPAid. Thanks to ERPAid!",
+      "author": "Sophia Brown",
+      "role": "Project Manager",
+      "company": "Enterprise Dynamics"
+    },
+    "testimonial6": {
+      "quote": "ERPAid is a game-changer for our organization. Excellent support from their team.",
+      "author": "James Wilson",
+      "role": "CFO",
+      "company": "Global Ventures"
+    }
+  },
+
+    "CTA": {
+      "title": "Ready to Transform Your Business?",
+      "description": "Get in touch with our team to learn how our ERP solutions can help streamline your operations and boost efficiency.",
+      "scheduleDemo": "Schedule a Demo",
+      "contactSales": "Contact Sales"
+    },
+  
+  "Footer": {
+    "companyName": "ERPAid",
+    "description": "Our solutions help businesses streamline operations and reduce costs associated with manual processes. We provide cutting-edge ERP solutions tailored to your needs.",
+    "services": "Services",
+    "digitalTransformation": "Digital Transformation",
+    "personalizedERP": "Personalized ERP Solutions",
+    "erpSoftware": "ERP Software Solutions",
+    "workforceMgmt": "Workforce Mgmt Solutions",
+    "integrations": "Integrations",
+    "connect": "Connect",
+    "blog": "Blog",
+    "allRightsReserved": "All rights reserved."
+  },
+
+  
+    "ContactPage": {
+      "title": "Driven to Innovate? Let’s Discuss How We Can Collaborate",
+      "description": "Schedule a meeting with our team to discuss your project",
+      "form": {
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone",
+        "timezone": "Timezone",
+        "date": "Date",
+        "preferredTime": "Preferred Time",
+        "agenda": "Agenda",
+        "attachFiles": "Attach Files",
+        "submit": "Submit",
+        "submitting": "Submitting...",
+        "selectTimezone": "Select your timezone",
+        "selectTimeSlot": "Select a time slot",
+        "pickDate": "Pick a date",
+        "agendaPlaceholder": "Tell us about your project and what you'd like to discuss..."
+      },
+      "toast": {
+        "success": "Success!",
+        "error": "Error",
+        "successMessage": "Your message has been sent successfully!",
+        "errorMessage": "Something went wrong. Please try again."
+      }
+    }  
+}

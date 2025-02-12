@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { ChangeEvent, useState, MouseEvent } from "react"
 import Link from "next/link"
 import { Button } from "@/app/[locale]/components/ui/button"
 import { Menu, X } from "lucide-react"
@@ -9,7 +9,7 @@ import Image from "next/image"
 import { useRouter, usePathname } from "next/navigation" // Add usePathname
 import { useTranslation } from "next-i18next"
 import { Popover, PopoverContent, PopoverTrigger } from "@/app/[locale]/components/ui/popover"
-import {useTranslations} from 'next-intl';
+import { useTranslations } from 'next-intl';
 
 export default function Navbar() {
   const t = useTranslations('HomePage');
@@ -18,9 +18,10 @@ export default function Navbar() {
   const pathname = usePathname(); // Get the current path
   const [isOpen, setIsOpen] = useState(false);
 
-  const changeLanguage = (lng: string) => {
-    // i18n.changeLanguage(lng); // Change language using i18n
-    // router.push(`/${lng}${pathname}`); // Navigate to the same path with the new language prefix
+  const changeLanguage = (e: MouseEvent<HTMLButtonElement>) => {
+    const nextLocale = e.currentTarget.value;
+    router.replace(`/${nextLocale}`)
+    console.log(e.currentTarget.value);
   };
 
   return (
@@ -46,7 +47,9 @@ export default function Navbar() {
             <Link href="/blog" className="text-gray-600 hover:text-[#4169E1] transition-colors">
               {t("blog")}
             </Link>
-            <Button className="bg-[#4169E1] hover:bg-[#4169E1]/90">
+            <Button className="bg-[#4169E1] hover:bg-[#4169E1]/90"
+              onClick={() => router.push("en/contact")}
+            >
               {t("requestDemo")}
             </Button>
             <Popover>
@@ -55,10 +58,10 @@ export default function Navbar() {
               </PopoverTrigger>
               <PopoverContent>
                 <div className="flex flex-col gap-2">
-                  <button onClick={() => changeLanguage("en")}>English</button>
-                  <button onClick={() => changeLanguage("es")}>Español</button>
-                  <button onClick={() => changeLanguage("fr")}>Français</button>
-                  <button onClick={() => changeLanguage("de")}>Deutsch</button>
+                  <button className="hover:bg-[#f0f0f3]" value='en' onClick={changeLanguage}>English</button>
+                  <button className="hover:bg-[#f0f0f3]" value='fr' onClick={changeLanguage}>Français</button>
+                  <button className="hover:bg-[#f0f0f3]" value='de' onClick={changeLanguage}>Deutsch</button>
+                  <button className="hover:bg-[#f0f0f3]" value='ch' onClick={changeLanguage}>中文</button>
                 </div>
               </PopoverContent>
             </Popover>
@@ -95,10 +98,11 @@ export default function Navbar() {
                 </PopoverTrigger>
                 <PopoverContent>
                   <div className="flex flex-col gap-2">
-                    <button onClick={() => changeLanguage("en")}>English</button>
-                    <button onClick={() => changeLanguage("es")}>Español</button>
-                    <button onClick={() => changeLanguage("fr")}>Français</button>
-                    <button onClick={() => changeLanguage("de")}>Deutsch</button>
+                    <button className="hover:bg-[#f0f0f3]" value='en' onClick={changeLanguage}>English</button>
+                    <button className="hover:bg-[#f0f0f3]" value='fr' onClick={changeLanguage}>Français</button>
+                    <button className="hover:bg-[#f0f0f3]" value='de' onClick={changeLanguage}>Deutsch</button>
+                    <button className="hover:bg-[#f0f0f3]" value='ch' onClick={changeLanguage}>中文</button>
+
                   </div>
                 </PopoverContent>
               </Popover>

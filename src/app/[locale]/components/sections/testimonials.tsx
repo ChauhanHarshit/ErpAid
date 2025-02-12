@@ -3,80 +3,73 @@
 import { Quote, ChevronLeft, ChevronRight } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { useTranslations } from "next-intl";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-const testimonials = [
-  {
-    quote:
-      "ERPAid has transformed how we manage our operations. The efficiency gains have been remarkable.",
-    author: "Sarah Johnson",
-    role: "Operations Director",
-    company: "Tech Solutions Inc.",
-  },
-  {
-    quote:
-      "Implementation was smooth and the results were immediate. Highly recommend their services.",
-    author: "Michael Chen",
-    role: "CEO",
-    company: "Global Logistics",
-  },
-  {
-    quote:
-      "The level of support and expertise from the ERPAid team has been exceptional.",
-    author: "Emma Williams",
-    role: "IT Manager",
-    company: "Manufacturing Pro",
-  },
-  {
-    quote:
-      "ERPAid's flexible features made it easy for us to adapt to new business processes.",
-    author: "David Lee",
-    role: "CTO",
-    company: "Innovatech Corp.",
-  },
-  {
-    quote:
-      "We've seen a 30% increase in productivity since implementing ERPAid. Thanks to ERPAid",
-    author: "Sophia Brown",
-    role: "Project Manager",
-    company: "Enterprise Dynamics",
-  },
-  {
-    quote:
-      "ERPAid is a game-changer for our organization. Excellent support from their team.",
-    author: "James Wilson",
-    role: "CFO",
-    company: "Global Ventures",
-  },
-];
-
 export default function Testimonials() {
+  const t = useTranslations("Testimonials");
+
+  const testimonials = [
+    {
+      quote: t("testimonial1.quote"),
+      author: t("testimonial1.author"),
+      role: t("testimonial1.role"),
+      company: t("testimonial1.company"),
+    },
+    {
+      quote: t("testimonial2.quote"),
+      author: t("testimonial2.author"),
+      role: t("testimonial2.role"),
+      company: t("testimonial2.company"),
+    },
+    {
+      quote: t("testimonial3.quote"),
+      author: t("testimonial3.author"),
+      role: t("testimonial3.role"),
+      company: t("testimonial3.company"),
+    },
+    {
+      quote: t("testimonial4.quote"),
+      author: t("testimonial4.author"),
+      role: t("testimonial4.role"),
+      company: t("testimonial4.company"),
+    },
+    {
+      quote: t("testimonial5.quote"),
+      author: t("testimonial5.author"),
+      role: t("testimonial5.role"),
+      company: t("testimonial5.company"),
+    },
+    {
+      quote: t("testimonial6.quote"),
+      author: t("testimonial6.author"),
+      role: t("testimonial6.role"),
+      company: t("testimonial6.company"),
+    },
+  ];
+
   return (
     <section className="py-24 bg-gray-50 relative">
       <div className="container mx-auto px-4 relative">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl font-bold mb-4">What Our Clients Say</h2>
-          <p className="text-gray-600">
-            Don't just take our word for it - hear from some of our satisfied
-            clients
-          </p>
+          <h2 className="text-3xl font-bold mb-4">{t("sectionTitle")}</h2>
+          <p className="text-gray-600">{t("sectionDescription")}</p>
         </div>
 
         {/* Custom Navigation Buttons */}
         <div className="absolute left-0 top-1/2 transform translate-y-8 z-10">
-  <button className="swiper-button-prev p-5 !text-[#4169E1] cursor-pointer">
-    <ChevronLeft className="h-6 w-6" />
-  </button>
-</div>
+          <button className="swiper-button-prev p-5 !text-[#4169E1] cursor-pointer">
+            <ChevronLeft className="h-6 w-6" />
+          </button>
+        </div>
 
-<div className="absolute right-0 top-1/2 transform translate-y-8 z-10">
-  <button className="swiper-button-next p-5 !text-[#4169E1] cursor-pointer">
-    <ChevronRight className="h-6 w-6" />
-  </button>
-</div>
-
+        <div className="absolute right-0 top-1/2 transform translate-y-8 z-10">
+          <button className="swiper-button-next p-5 !text-[#4169E1] cursor-pointer">
+            <ChevronRight className="h-6 w-6" />
+          </button>
+        </div>
 
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
@@ -99,9 +92,7 @@ export default function Testimonials() {
                 <Quote className="h-8 w-8 text-[#4169E1] mb-4" />
                 <p className="text-gray-600 mb-6">"{testimonial.quote}"</p>
                 <div>
-                  <p className="font-semibold text-gray-900">
-                    {testimonial.author}
-                  </p>
+                  <p className="font-semibold text-gray-900">{testimonial.author}</p>
                   <p className="text-sm text-gray-500">
                     {testimonial.role}, {testimonial.company}
                   </p>

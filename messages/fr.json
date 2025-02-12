@@ -1,15 +1,171 @@
 {
-    "HomePage":{
-    "services": "Services",
-    "about": "À propos",
-    "blog": "Blog",
-    "requestDemo": "Demander une démo",
-    "unlockingBusinessGrowth": "Stimuler la croissance des entreprises",
-    "withIntelligentERP": "avec un ERP intelligent",
-    "streamlineOperations": "Rationalisez les opérations, améliorez l'efficacité et obtenez un avantage concurrentiel avec nos solutions ERP de pointe.",
-    "trustedByBusinesses": "De nombreuses entreprises leaders nous font confiance à travers le monde",
-    "requestADemo": "Demander une démo",
-    "viewServices": "Voir les services"
-    }
-}
+    "HomePage": {
+      "services": "Services",
+      "about": "À propos",
+      "blog": "Blog",
+      "requestDemo": "Demander une démo",
+      "unlockingBusinessGrowth": "Stimuler la croissance des entreprises",
+      "withIntelligentERP": "avec un ERP intelligent",
+      "streamlineOperations": "Rationalisez les opérations, améliorez l'efficacité et obtenez un avantage concurrentiel avec nos solutions ERP de pointe.",
+      "trustedByBusinesses": "De nombreuses entreprises leaders nous font confiance à travers le monde",
+      "requestADemo": "Demander une démo",
+      "viewServices": "Voir les services"
+    },
+    "Hero": {
+        "unlockingBusinessGrowth": "Stimuler la croissance des entreprises",
+        "withIntelligentERP": "avec un ERP intelligent",
+        "streamlineOperations": "Rationalisez les opérations, améliorez l'efficacité et obtenez un avantage concurrentiel avec nos solutions ERP de pointe.",
+        "requestADemo": "Demander une démo",
+        "viewServices": "Voir les services",
+        "trustedByBusinesses": "De nombreuses entreprises leaders nous font confiance à travers le monde"
+      },
+      "Features": {
+        "sectionTitle": "Solutions ERP Complètes",
+        "sectionDescription": "Découvrez comment nos solutions peuvent transformer vos opérations commerciales et stimuler la croissance.",
+        "learnMore": "En savoir plus",
+        
+        "financialManagement": {
+          "title": "Gestion Financière",
+          "description": "Gestion et optimisation efficace de la main-d'œuvre.",
+          "benefits": ["Planification des employés", "Suivi des performances", "Allocation des ressources"]
+        },
+        "digitalTransformation": {
+          "title": "Transformation Numérique",
+          "description": "Transformez votre entreprise avec des solutions numériques de pointe.",
+          "benefits": ["Flux de travail automatisés", "Optimisation des processus numériques", "Productivité améliorée"]
+        },
+        "erpSolutions": {
+          "title": "Solutions ERP",
+          "description": "Solutions ERP complètes adaptées à vos besoins.",
+          "benefits": ["Opérations rationalisées", "Analyses en temps réel", "Systèmes intégrés"]
+        },
+        "crmSoftware": {
+          "title": "Logiciel CRM",
+          "description": "Gérez efficacement les relations clients.",
+          "benefits": ["Gestion des leads", "Automatisation des ventes", "Aperçus clients"]
+        },
+        "supplyChain": {
+          "title": "Chaîne d'Approvisionnement",
+          "description": "Optimisez les opérations de la chaîne d'approvisionnement de manière transparente.",
+          "benefits": ["Contrôle des stocks", "Suivi logistique", "Gestion des fournisseurs"]
+        },
+        "workforceManagement": {
+          "title": "Gestion de la Main-d'œuvre",
+          "description": "Gestion et optimisation efficace de la main-d'œuvre.",
+          "benefits": ["Planification des employés", "Suivi des performances", "Allocation des ressources"]
+        }
+      },
+        "Stats": {
+          "sectionTitle": "Des Résultats Mesurables",
+          "sectionDescription": "Découvrez comment nos solutions ERP ont aidé des entreprises comme la vôtre.",
+          
+          "stat1": {
+            "value": "95+",
+            "label": "Satisfaction Client",
+            "description": "Nos clients évaluent constamment leur expérience avec nos solutions ERP de manière très positive."
+          },
+          "stat2": {
+            "value": "30%",
+            "label": "Augmentation de l'Efficacité",
+            "description": "En moyenne, nos clients constatent une augmentation significative de l'efficacité opérationnelle après la mise en œuvre de nos solutions ERP."
+          },
+          "stat3": {
+            "value": "15%",
+            "label": "Réduction des Coûts",
+            "description": "Nos solutions aident les entreprises à rationaliser leurs opérations et à réduire les coûts liés aux processus manuels."
+          }
+        },
+
+        "Testimonials": {
+          "sectionTitle": "Ce que disent nos clients",
+          "sectionDescription": "Ne vous fiez pas seulement à notre parole - écoutez certains de nos clients satisfaits.",
+          
+          "testimonial1": {
+            "quote": "ERPAid a transformé la gestion de nos opérations. Les gains d'efficacité ont été remarquables.",
+            "author": "Sarah Johnson",
+            "role": "Directrice des opérations",
+            "company": "Tech Solutions Inc."
+          },
+          "testimonial2": {
+            "quote": "La mise en œuvre a été fluide et les résultats ont été immédiats. Je recommande vivement leurs services.",
+            "author": "Michael Chen",
+            "role": "PDG",
+            "company": "Global Logistics"
+          },
+          "testimonial3": {
+            "quote": "Le niveau de soutien et d'expertise de l'équipe ERPAid a été exceptionnel.",
+            "author": "Emma Williams",
+            "role": "Responsable informatique",
+            "company": "Manufacturing Pro"
+          },
+          "testimonial4": {
+            "quote": "Les fonctionnalités flexibles d'ERPAid nous ont permis de nous adapter facilement à de nouveaux processus métier.",
+            "author": "David Lee",
+            "role": "CTO",
+            "company": "Innovatech Corp."
+          },
+          "testimonial5": {
+            "quote": "Nous avons constaté une augmentation de 30 % de la productivité depuis la mise en œuvre d'ERPAid. Merci à ERPAid !",
+            "author": "Sophia Brown",
+            "role": "Chef de projet",
+            "company": "Enterprise Dynamics"
+          },
+          "testimonial6": {
+            "quote": "ERPAid est un véritable atout pour notre organisation. Excellent support de leur équipe.",
+            "author": "James Wilson",
+            "role": "Directeur financier",
+            "company": "Global Ventures"
+          }
+        },      
+
+            "CTA": {
+              "title": "Prêt à Transformer Votre Entreprise ?",
+              "description": "Contactez notre équipe pour découvrir comment nos solutions ERP peuvent rationaliser vos opérations et améliorer votre efficacité.",
+              "scheduleDemo": "Planifier une Démo",
+              "contactSales": "Contacter les Ventes"
+            },
+          
+    "Footer": {
+      "companyName": "ERPAid",
+      "description": "Nos solutions aident les entreprises à rationaliser leurs opérations et à réduire les coûts liés aux processus manuels. Nous fournissons des solutions ERP de pointe adaptées à vos besoins.",
+      "services": "Services",
+      "digitalTransformation": "Transformation numérique",
+      "personalizedERP": "Solutions ERP personnalisées",
+      "erpSoftware": "Solutions logicielles ERP",
+      "workforceMgmt": "Solutions de gestion des effectifs",
+      "integrations": "Intégrations",
+      "connect": "Se connecter",
+      "blog": "Blog",
+      "allRightsReserved": "Tous droits réservés."
+    },
+
+
+        "ContactPage": {
+          "title": "Prêt à Innover ? Discutons de Comment Collaborer",
+          "description": "Planifiez une réunion avec notre équipe pour discuter de votre projet",
+          "form": {
+            "name": "Nom",
+            "email": "E-mail",
+            "phone": "Téléphone",
+            "timezone": "Fuseau horaire",
+            "date": "Date",
+            "preferredTime": "Heure préférée",
+            "agenda": "Ordre du jour",
+            "attachFiles": "Joindre des fichiers",
+            "submit": "Envoyer",
+            "submitting": "Envoi en cours...",
+            "selectTimezone": "Sélectionnez votre fuseau horaire",
+            "selectTimeSlot": "Sélectionnez un créneau horaire",
+            "pickDate": "Choisir une date",
+            "agendaPlaceholder": "Parlez-nous de votre projet et de ce que vous aimeriez discuter..."
+          },
+          "toast": {
+            "success": "Succès !",
+            "error": "Erreur",
+            "successMessage": "Votre message a été envoyé avec succès !",
+            "errorMessage": "Une erreur est survenue. Veuillez réessayer."
+          }
+        }
+      
+  }
   
