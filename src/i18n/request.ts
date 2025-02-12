@@ -8,7 +8,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
   // Await the promise to get the actual locale value
   const resolvedLocale = await requestLocale;
 
-  let locale: Locale | undefined = routing.locales.includes(resolvedLocale as Locale)
+  const locale: Locale | undefined = routing.locales.includes(resolvedLocale as Locale)
     ? (resolvedLocale as Locale)
     : (routing.defaultLocale as Locale);
 
