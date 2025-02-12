@@ -1,5 +1,4 @@
 "use client"
-/* eslint-disable @typescript-eslint/no-unused-vars */
 
 import { useState, useRef } from "react"
 import { CalendarIcon, Loader2, PaperclipIcon } from "lucide-react"
