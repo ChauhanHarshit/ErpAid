@@ -1,4 +1,5 @@
 "use client"
+/* eslint-disable @typescript-eslint/no-unused-vars */
 
 import { ChangeEvent, useState, MouseEvent } from "react"
 import Link from "next/link"
