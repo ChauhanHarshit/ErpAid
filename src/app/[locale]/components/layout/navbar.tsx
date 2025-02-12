@@ -33,8 +33,8 @@ export default function Navbar() {
     >
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <Link href="/" className="text-xl font-bold text-[#002D72]">
-            ERPAid
+          <Link href="/" className="flex text-xl font-bold text-[#002D72]">
+            ERPAid <Image src={"/plus.png"} alt="logo" width={25} height={20}/>
           </Link>
 
           <div className="hidden md:flex items-center gap-8">
