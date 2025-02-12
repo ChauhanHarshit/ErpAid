@@ -34,8 +34,8 @@ export default function Navbar() {
     >
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <Link href={`/${currentLocale}`} className="text-xl font-bold text-[#002D72]">
-            ERPAid
+          <Link href={`/${currentLocale}`} className="flex text-xl font-bold text-[#002D72]">
+            ERPAid <Image alt="aid icon" src={"/plus.png"} width={25} height={25} />
           </Link>
 
           <div className="hidden md:flex items-center gap-8">

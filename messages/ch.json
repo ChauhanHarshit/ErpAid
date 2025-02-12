@@ -98,8 +98,8 @@
         }
     },
     "Testimonials": {
-        "title": "客户评价",
-        "description": "聆听部分满意客户的心声。",
+        "sectionTitle": "客户评价",
+        "sectionDescription": "聆听部分满意客户的心声。",
         "testimonial1": {
             "quote": "ERPAid彻底改变了我们的运营管理方式，效率提升非常显著。",
             "author": "Sarah Johnson",

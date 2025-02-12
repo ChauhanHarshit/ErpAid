@@ -90,7 +90,7 @@ export default function Testimonials() {
             <SwiperSlide key={index}>
               <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow h-full">
                 <Quote className="h-8 w-8 text-[#4169E1] mb-4" />
-                <p className="text-gray-600 mb-6">"{testimonial.quote}"</p>
+                <p className="text-gray-600 mb-6">{testimonial.quote}</p>
                 <div>
                   <p className="font-semibold text-gray-900">{testimonial.author}</p>
                   <p className="text-sm text-gray-500">

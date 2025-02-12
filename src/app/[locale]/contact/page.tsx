@@ -62,7 +62,7 @@ export default function ContactPage() {
     },
   })
 
-  async function onSubmit(values: z.infer<typeof formSchema>) {
+  async function onSubmit() {
     setIsSubmitting(true)
     // const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
     // const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
@@ -89,7 +89,7 @@ export default function ContactPage() {
       } else {
         throw new Error("Form reference is null")
       }
-    } catch (error) {
+    } catch  {
       toast({
         variant: "destructive",
         title: t("toast.error"),
