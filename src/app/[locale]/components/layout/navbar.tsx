@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, MouseEvent } from "react";
+import { useState, MouseEvent, useEffect } from "react";
 import Link from "next/link";
 import { Button } from "@/app/[locale]/components/ui/button";
 import { Menu, X } from "lucide-react";
@@ -16,6 +16,7 @@ export default function Navbar() {
   const router = useRouter();
   const pathname = usePathname(); 
   const [isOpen, setIsOpen] = useState(false);
+  const [isMounted , setIsmount] = useState(false);
   const pathSegments = pathname.split("/");
   const currentLocale = pathSegments[1]; 
 
@@ -26,7 +27,14 @@ export default function Navbar() {
     console.log('Attempting to change language to:', nextLocale);
     router.push(newPath);
   };
+
+  useEffect (()=>{
+    setIsmount(true)
+  },[])
   
+  if(!isMounted){
+    return null
+  }
 
   return (
     <motion.header
@@ -36,10 +44,11 @@ export default function Navbar() {
       transition={{ duration: 0.5 }}
     >
       <nav className="container mx-auto px-4 py-4">
+        <>
         <div className="flex items-center justify-between">
           {/* Logo with link to the homepage */}
           <Link href={`/${currentLocale}`} className="flex text-xl font-bold text-[#002D72]">
-            ERPAid <Image alt="aid icon" src={"/plus.png"} width={25} height={25} />
+            erpAId <Image alt="aid icon" src={"/plus.png"} width={25} height={25} />
           </Link>
 
           {/* Desktop Navigation Menu */}
@@ -103,6 +112,7 @@ export default function Navbar() {
             </div>
           </div>
         )}
+        </>
       </nav>
     </motion.header>
   );
