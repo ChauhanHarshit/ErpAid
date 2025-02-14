@@ -14,18 +14,21 @@ type Locale = (typeof routing.locales)[number];
 
 export default async function LocaleLayout({
   children,
-  params: { locale }
+  params
 }: {
   children: React.ReactNode;
   params: { locale: string };
 }) {
+  // Wait for params properly
+  const { locale } = await Promise.resolve(params);
+
   // Ensure that the incoming `locale` is valid
   if (!routing.locales.includes(locale as Locale)) {
     notFound();
   }
 
   // Providing all messages to the client
-  const messages = await getMessages();
+  const messages = await getMessages({ locale });
 
   return (
     <html lang={locale}>

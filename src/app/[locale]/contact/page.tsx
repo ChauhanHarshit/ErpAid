@@ -11,7 +11,7 @@ import emailjs from "@emailjs/browser"
 
 import { cn } from "@/lib/utils"
 import { Button } from "@/app/[locale]/components/ui/button"
-import { Calendar } from "@/app/[locale]/components/ui/calendar"
+// import { Calendar } from "@/app/[locale]/components/ui/calendar"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/app/[locale]/components/ui/form"
 import { Input } from "@/app/[locale]/components/ui/input"
 import { Popover, PopoverContent, PopoverTrigger } from "@/app/[locale]/components/ui/popover"
@@ -64,9 +64,6 @@ export default function ContactPage() {
 
   async function onSubmit() {
     setIsSubmitting(true)
-    // const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
-    // const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
-    // const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
     try {
       if (form.current) {
@@ -89,7 +86,7 @@ export default function ContactPage() {
       } else {
         throw new Error("Form reference is null")
       }
-    } catch  {
+    } catch {
       toast({
         variant: "destructive",
         title: t("toast.error"),
@@ -182,7 +179,7 @@ export default function ContactPage() {
                 />
               </div>
 
-              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+              {/* <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                 <FormField
                   control={formMethods.control}
                   name="date"
@@ -243,7 +240,7 @@ export default function ContactPage() {
                     </FormItem>
                   )}
                 />
-              </div>
+              </div> */}
 
               <FormField
                 control={formMethods.control}

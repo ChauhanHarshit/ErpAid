@@ -66,11 +66,11 @@ export default function Footer() {
             transition={{ duration: 0.5, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            <h4 className="font-semibold mb-4">{t("connect")}</h4>
+            {/* <h4 className="font-semibold mb-4">{t("connect")}</h4> */}
             <div className="space-y-4">
-              <Link href="/blog" className="block text-gray-600 hover:text-[#4169E1] text-sm transition-colors">
+              {/* <Link href="/blog" className="block text-gray-600 hover:text-[#4169E1] text-sm transition-colors">
                 {t("blog")}
-              </Link>
+              </Link> */}
               <div className="flex space-x-4">
                 <a href="#" className="text-gray-400 hover:text-[#4169E1]" aria-label="Twitter">
                   Twitter
@@ -79,7 +79,7 @@ export default function Footer() {
                   LinkedIn
                 </a>
                 <a href="#" className="text-gray-400 hover:text-[#4169E1]" aria-label="GitHub">
-                  GitHub
+                  Facebook
                 </a>
               </div>
             </div>

@@ -104,9 +104,9 @@ export default function Features() {
           ))}
         </div>
 
-        <div className="flex justify-center mt-10">
+        {/* <div className="flex justify-center mt-10">
           <Button className="bg-[#4169E1] hover:bg-[#4169E1]/90">{t("learnMore")}</Button>
-        </div>
+        </div> */}
       </div>
     </section>
   );

@@ -92,10 +92,10 @@ export default function Testimonials() {
                 <Quote className="h-8 w-8 text-[#4169E1] mb-4" />
                 <p className="text-gray-600 mb-6">{testimonial.quote}</p>
                 <div>
-                  <p className="font-semibold text-gray-900">{testimonial.author}</p>
-                  <p className="text-sm text-gray-500">
+                  {/* <p className="font-semibold text-gray-900">{testimonial.author}</p> */}
+                  {/* <p className="text-sm text-gray-500">
                     {testimonial.role}, {testimonial.company}
-                  </p>
+                  </p> */}
                 </div>
               </div>
             </SwiperSlide>

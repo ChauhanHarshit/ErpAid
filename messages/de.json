@@ -98,8 +98,8 @@
       }
     },
     "Testimonials": {
-      "title": "Was unsere Kunden sagen",
-      "description": "Hören Sie von einigen unserer zufriedenen Kunden.",
+      "sectionTitle": "Was unsere Kunden sagen",
+      "sectionDescription": "Hören Sie von einigen unserer zufriedenen Kunden.",
       "testimonial1": {
         "quote": "ERPAid hat unsere Betriebsabläufe revolutioniert. Die Effizienzgewinne sind bemerkenswert.",
         "author": "Sarah Johnson",
