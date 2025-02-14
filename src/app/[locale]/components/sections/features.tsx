@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
-import { Button } from "@/app/[locale]/components/ui/button";
+// import { Button } from "@/app/[locale]/components/ui/button";
 import { useTranslations } from "next-intl";
 
 export default function Features() {

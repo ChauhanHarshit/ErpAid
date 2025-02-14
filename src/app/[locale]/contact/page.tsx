@@ -1,20 +1,20 @@
 "use client"
 
 import { useState, useRef } from "react"
-import { CalendarIcon, Loader2, PaperclipIcon } from "lucide-react"
-import { format } from "date-fns"
+import {  Loader2, PaperclipIcon } from "lucide-react"
+// import { format } from "date-fns"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { z } from "zod"
 import { useTranslations } from "next-intl"
 import emailjs from "@emailjs/browser"
 
-import { cn } from "@/lib/utils"
+// import { cn } from "@/lib/utils"
 import { Button } from "@/app/[locale]/components/ui/button"
 // import { Calendar } from "@/app/[locale]/components/ui/calendar"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/app/[locale]/components/ui/form"
 import { Input } from "@/app/[locale]/components/ui/input"
-import { Popover, PopoverContent, PopoverTrigger } from "@/app/[locale]/components/ui/popover"
+// import { Popover, PopoverContent, PopoverTrigger } from "@/app/[locale]/components/ui/popover"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/app/[locale]/components/ui/select"
 import { Textarea } from "@/app/[locale]/components/ui/textarea"
 import { useToast } from "@/hooks/use-toast"
@@ -29,14 +29,14 @@ const formSchema = z.object({
   agenda: z.string().optional(),
 })
 
-const timeSlots = [
-  "09:00 AM - 10:00 AM",
-  "10:00 AM - 11:00 AM",
-  "11:00 AM - 12:00 PM",
-  "02:00 PM - 03:00 PM",
-  "03:00 PM - 04:00 PM",
-  "04:00 PM - 05:00 PM",
-]
+// const timeSlots = [
+//   "09:00 AM - 10:00 AM",
+//   "10:00 AM - 11:00 AM",
+//   "11:00 AM - 12:00 PM",
+//   "02:00 PM - 03:00 PM",
+//   "03:00 PM - 04:00 PM",
+//   "04:00 PM - 05:00 PM",
+// ]
 
 const timezones = [
   "Asia/Calcutta (+05:30)",
