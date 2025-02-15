@@ -63,20 +63,24 @@ export default function ContactPage() {
   })
 
   async function onSubmit() {
+    console.log("first log of sending email data");
     setIsSubmitting(true)
 
     try {
       if (form.current) {
         const result = await emailjs.sendForm(
-          process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-          process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
-          form.current,
-          process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+          // process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+          // process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+          // form.current,
+          // process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+          "service_xrztnuj","template_3hdn4so",form.current , "vK1IGvNkkm7p52neW"
         )
+        // console.log("first log of sending email data");
+        console.log("result");
 
         if (result.text === "OK") {
           toast({
-            title: t("toast.success"),
+            title: t("toast.success"), 
             description: t("toast.successMessage"),
           })
           formMethods.reset()
@@ -261,7 +265,7 @@ export default function ContactPage() {
                   <PaperclipIcon className="h-4 w-4" />
                   {t("form.attachFiles")}
                 </Button>
-                <Button type="submit" disabled={isSubmitting} className="ml-auto bg-[#4169E1]">
+                <Button type="submit" disabled={isSubmitting} onClick={onSubmit} className="ml-auto bg-[#4169E1]">
                   {isSubmitting && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
                   {isSubmitting ? t("form.submitting") : t("form.submit")}
                 </Button>
