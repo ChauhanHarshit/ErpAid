@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useRef } from "react"
-import {  Loader2, PaperclipIcon } from "lucide-react"
+import { Loader2, PaperclipIcon } from "lucide-react"
 // import { format } from "date-fns"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
@@ -69,9 +69,9 @@ export default function ContactPage() {
       if (form.current) {
         const result = await emailjs.sendForm(
           process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
-        form.current,
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+          process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+          form.current,
+          process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
         )
 
         if (result.text === "OK") {
