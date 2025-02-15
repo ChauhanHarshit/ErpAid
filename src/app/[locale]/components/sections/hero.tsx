@@ -7,7 +7,6 @@ import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
 
 const imagePaths = [
-  // "/nestle.svg",
   "/captionlab.svg",
   "/ecom.jpeg",
   "/myhelpa.svg",

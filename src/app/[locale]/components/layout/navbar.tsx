@@ -48,7 +48,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           {/* Logo with link to the homepage */}
           <Link href={`/${currentLocale}`} className="flex text-xl font-bold text-[#002D72]">
-            erpAId <Image alt="aid icon" src={"/plus.png"} width={25} height={25} />
+            erp<span className="text-[#aa2121]">AI</span>d <Image alt="aid icon" src={"/plus.png"} width={25} height={25} />
           </Link>
 
           {/* Desktop Navigation Menu */}
