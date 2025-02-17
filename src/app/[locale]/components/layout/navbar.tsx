@@ -14,9 +14,9 @@ export default function Navbar() {
   const t = useTranslations('HomePage');
 
   const router = useRouter();
-  const pathname = usePathname(); 
   const [isOpen, setIsOpen] = useState(false);
   const [isMounted , setIsmount] = useState(false);
+  const pathname = usePathname(); 
   const pathSegments = pathname.split("/");
   const currentLocale = pathSegments[1]; 
 
@@ -53,7 +53,7 @@ export default function Navbar() {
 
           {/* Desktop Navigation Menu */}
           <div className="hidden md:flex items-center gap-8">
-            <Link href={`/${currentLocale}/services`} className="text-gray-600 hover:text-[#4169E1] transition-colors">
+            <Link href={`/${currentLocale}/#services`} className="text-gray-600 hover:text-[#4169E1] transition-colors">
               {t("services")}
             </Link>
             <Link href={`/${currentLocale}/about`} className="text-gray-600 hover:text-[#4169E1] transition-colors">

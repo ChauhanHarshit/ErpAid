@@ -2,12 +2,15 @@
 
 import { Button } from "@/app/[locale]/components/ui/button";
 import { motion } from "framer-motion";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
 
 export default function CTA() {
   const router = useRouter();
   const t = useTranslations("CTA");
+  const pathname = usePathname(); 
+const pathSegments = pathname.split("/");
+const currentLocale = pathSegments[1]; 
 
   return (
     <section className="py-24">
@@ -25,7 +28,7 @@ export default function CTA() {
             <Button
               size="lg"
               className="bg-white text-[#4169E1] hover:bg-white/90"
-              onClick={() => router.push("/contact")}
+              onClick={() => router.push(`${currentLocale}/contact`)}
             >
               {t("scheduleDemo")}
             </Button>

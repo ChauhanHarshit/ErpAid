@@ -66,7 +66,7 @@ export default function Features() {
   ];
 
   return (
-    <section className="py-24">
+    <section id="services" className="py-24">
       <div className="container mx-auto px-4">
         <motion.div
           className="text-center max-w-3xl mx-auto mb-16"

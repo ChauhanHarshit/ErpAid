@@ -3,7 +3,7 @@
 import { Button } from "@/app/[locale]/components/ui/button";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
 
 const imagePaths = [
@@ -16,6 +16,9 @@ const imagePaths = [
 export default function Hero() {
   const router = useRouter();
   const t = useTranslations("Hero"); // Using translations for Hero section
+  const pathname = usePathname();
+  const pathSegments = pathname.split("/");
+  const currentLocale = pathSegments[1];
 
   return (
     <section className="pt-32 pb-16 md:pt-40 md:pb-24">
@@ -39,7 +42,7 @@ export default function Hero() {
             <Button
               size="lg"
               className="bg-[#4169E1] hover:bg-[#4169E1]/90"
-              onClick={() => router.push("/contact")}
+              onClick={() => router.push(`${currentLocale}/contact`)}
             >
               {t("requestADemo")}
             </Button>
